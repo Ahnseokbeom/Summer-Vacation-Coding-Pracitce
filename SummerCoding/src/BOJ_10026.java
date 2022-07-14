@@ -8,6 +8,8 @@ public class BOJ_10026 {
 	static int n = 0;
 	static char[][] map1;
 	static char[][] map2;
+	static int[] dx = {0,0,-1,1};
+	static int[] dy = {-1,1,0,0};
    public static void main(String[] args) throws IOException{
 	   BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	   n = Integer.parseInt(br.readLine());
@@ -24,7 +26,7 @@ public class BOJ_10026 {
 	   }
 	   for(int i = 0;i<n;i++) {
 		   for(int j = 0;j<n;j++) {
-			   if(map1[i][j]!='C') {
+			   if(map1[i][j]!='c') {
 				   count1++;
 				   dfs1(i,j,map1[i][j]);
 			   }
@@ -32,33 +34,38 @@ public class BOJ_10026 {
 	   }
 	   for(int i = 0;i<n;i++) {
 		   for(int j = 0;j<n;j++) {
-			   if(map2[i][j]!='C') {
+			   if(map2[i][j]!='c') {
 				   count2++;
 				   dfs2(i,j,map2[i][j]);
 			   }
 		   }
 	   }
 	   System.out.println(count1+" "+count2);
-
    }
    public static void dfs1(int x, int y, char c) {
-	   if(x<0 || x>=n || y<0 || y>=n || map1[x][y] == 'C') return;
+	   if(x<0 || x>=n || y<0 || y>=n || map1[x][y] == 'c') return;
 	   if((c=='R' && map1[x][y]=='R') || (c=='G' && map1[x][y]=='G') || (c=='B' && map1[x][y]=='B')) {
-		   map1[x][y] = 'C';
-		   dfs1(x,y-1,c);
-		   dfs1(x,y+1,c);
-		   dfs1(x-1,y,c);
-		   dfs1(x+1,y,c);
+		   map1[x][y] = 'c';
+//		   dfs1(x+0,y-1,c);
+//		   dfs1(x+0,y+1,c);
+//		   dfs1(x-1,y+0,c);
+//		   dfs1(x+1,y+0,c);
+		   for(int i = 0;i<4;i++) {
+			   dfs1(x+dx[i],y+dy[i],c);
+		   }
 	   }
    }
    public static void dfs2(int x, int y, char c) {
-	   if(x<0 || x>=n || y<0 || y>=n || map2[x][y] == 'C') return;
+	   if(x<0 || x>=n || y<0 || y>=n || map2[x][y] == 'c') return;
 	   if((c=='R' && map2[x][y]=='R') || (c=='B' && map2[x][y]=='B')) {
-		   map2[x][y] = 'C';
-		   dfs2(x,y-1,c);
-		   dfs2(x,y+1,c);
-		   dfs2(x-1,y,c);
-		   dfs2(x+1,y,c);
+		   map2[x][y] = 'c';
+//		   dfs2(x,y-1,c);
+//		   dfs2(x,y+1,c);
+//		   dfs2(x-1,y,c);
+//		   dfs2(x+1,y,c);
+		   for(int i = 0;i<4;i++) {
+			   dfs2(x+dx[i],y+dy[i],c);
+		   }
 	   }
    }
 }

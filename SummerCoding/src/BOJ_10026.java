@@ -45,11 +45,8 @@ public class BOJ_10026 {
    public static void dfs1(int x, int y, char c) {
 	   if(x<0 || x>=n || y<0 || y>=n || map1[x][y] == 'c') return;
 	   if((c=='R' && map1[x][y]=='R') || (c=='G' && map1[x][y]=='G') || (c=='B' && map1[x][y]=='B')) {
+		   // c로 변수를 바꿔줌으로 체크한 곳이라는 것을 표시
 		   map1[x][y] = 'c';
-//		   dfs1(x+0,y-1,c);
-//		   dfs1(x+0,y+1,c);
-//		   dfs1(x-1,y+0,c);
-//		   dfs1(x+1,y+0,c);
 		   for(int i = 0;i<4;i++) {
 			   dfs1(x+dx[i],y+dy[i],c);
 		   }
@@ -59,10 +56,6 @@ public class BOJ_10026 {
 	   if(x<0 || x>=n || y<0 || y>=n || map2[x][y] == 'c') return;
 	   if((c=='R' && map2[x][y]=='R') || (c=='B' && map2[x][y]=='B')) {
 		   map2[x][y] = 'c';
-//		   dfs2(x,y-1,c);
-//		   dfs2(x,y+1,c);
-//		   dfs2(x-1,y,c);
-//		   dfs2(x+1,y,c);
 		   for(int i = 0;i<4;i++) {
 			   dfs2(x+dx[i],y+dy[i],c);
 		   }

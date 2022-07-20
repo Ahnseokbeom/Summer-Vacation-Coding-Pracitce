@@ -19,13 +19,9 @@ public class PRO_2_OpenChat {
 	    	}
 	    	String[] answer = new String[list.size()];
 	    	for(int i = 0;i<answer.length;i++) {
-	    		int idx = list.get(i).indexOf("님"); // (uid???? - 0~6까지이므로) 7 뽑아냄
-	    		String str = list.get(i).substring(0,idx); // 0~6까지 뽑음(~~님이 들어왔습니다. ~~ 발췌)
+	    		int idx = list.get(i).indexOf("님");
+	    		String str = list.get(i).substring(0,idx);
 	    		answer[i] = name.get(str)+list.get(i).substring(idx);
-	    		//name.get(str)이란 name.get - hashmap으로 현재 id(키값)와 username이 있음
-	    		//그래서 name.get(str)을 하면 id(키값)가 들어오기 때문에 username으로 바뀐다.
-	    		//substring이란 - substring(1,2) - 1은 시작,2는 끝 / substring(1) 1은 시작이므로 1부터 끝까지
-	    		//즉, substring(idx) = "님"부터 끝까지 출력해준다.
 	    	}
 
 	        return answer;

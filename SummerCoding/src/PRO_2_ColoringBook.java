@@ -1,7 +1,9 @@
 public class PRO_2_ColoringBook {
 	class Solution {
 	    public int[] solution(int m, int n, int[][] picture) {
+	    	// 영역
 	        int numberOfArea = 0;
+	        // 최대 갯수
 	        int maxSizeOfOneArea = 0;
 	        boolean[][] check = new boolean[m][n];
 	        int[] answer = new int[2];

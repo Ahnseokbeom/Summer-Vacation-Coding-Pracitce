@@ -8,6 +8,7 @@ public class PRO_2_StringZip {
 //		String s = "aabbaccc";
 		int answer = 0;
 		if(s.length()==1) answer = 1;
+		// s 길이/2+1보다 작으면 반복되지 않음
 		for (int i = 1; i < s.length() / 2 + 1; i++) {
 			 // pattern
             String pattern = s.substring(0, i);

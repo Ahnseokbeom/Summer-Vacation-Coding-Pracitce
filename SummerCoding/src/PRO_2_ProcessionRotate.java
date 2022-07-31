@@ -21,10 +21,23 @@ public class PRO_2_ProcessionRotate {
             int y1 = queries[i][1];
             int x2 = queries[i][2];
             int y2 = queries[i][3];
-
+            System.out.println(x1+" "+y1+" "+x2+" "+y2);
+            // 첫번째 값 저장
             int temp = arr[x1][y1];
+            System.out.println(temp);
 
             int min = temp;
+
+            //우측 테두리 이동
+            for(int j = x2; j > x1; j--) {
+                arr[j][y2] = arr[j-1][y2];
+                min = Math.min(min, arr[j][y2]);
+            }
+            //하단 테두리 이동
+            for(int j = y1; j < y2; j++) {
+                arr[x2][j] = arr[x2][j+1];
+                min = Math.min(min, arr[x2][j]);
+            }
 
             //좌측 테두리 이동
             for(int j = x1; j < x2; j++) {
@@ -32,25 +45,11 @@ public class PRO_2_ProcessionRotate {
                 min = Math.min(min, arr[j][y1]);
             }
 
-            //하단 테두리 이동
-            for(int j = y1; j < y2; j++) {
-                arr[x2][j] = arr[x2][j+1];
-                min = Math.min(min, arr[x2][j]);
-            }
-
-            //우측 테두리 이동
-            for(int j = x2; j > x1; j--) {
-                arr[j][y2] = arr[j-1][y2];
-                min = Math.min(min, arr[j][y2]);
-            }
-
-
             //상단 테두리 이동
             for(int j = y2; j > y1; j--) {
                 arr[x1][j] = arr[x1][j-1];
                 min = Math.min(min, arr[x1][j]);
             }
-
             arr[x1][y1+1] = temp;
 
             answer[i] = min;

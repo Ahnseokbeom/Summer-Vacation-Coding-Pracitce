@@ -28,22 +28,24 @@ public class PRO_2_ProcessionRotate {
 
             int min = temp;
 
-            //우측 테두리 이동
-            for(int j = x2; j > x1; j--) {
-                arr[j][y2] = arr[j-1][y2];
-                min = Math.min(min, arr[j][y2]);
+            //좌측 테두리 이동
+            for(int j = x1; j < x2; j++) {
+                arr[j][y1] = arr[j+1][y1];
+                min = Math.min(min, arr[j][y1]);
             }
+
             //하단 테두리 이동
             for(int j = y1; j < y2; j++) {
                 arr[x2][j] = arr[x2][j+1];
                 min = Math.min(min, arr[x2][j]);
             }
 
-            //좌측 테두리 이동
-            for(int j = x1; j < x2; j++) {
-                arr[j][y1] = arr[j+1][y1];
-                min = Math.min(min, arr[j][y1]);
+            //우측 테두리 이동
+            for(int j = x2; j > x1; j--) {
+                arr[j][y2] = arr[j-1][y2];
+                min = Math.min(min, arr[j][y2]);
             }
+
 
             //상단 테두리 이동
             for(int j = y2; j > y1; j--) {

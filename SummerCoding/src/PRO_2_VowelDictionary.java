@@ -16,6 +16,7 @@ public class PRO_2_VowelDictionary {
 		if(idx==5) return;
 		for(int i = 0;i<arr.length;i++) {
 			String str = s+arr[i];
+			System.out.println(i+" "+str+" "+arr[i]+" "+idx);
 			count++;
 			if(str.equals(word)) {
 				answer = count;

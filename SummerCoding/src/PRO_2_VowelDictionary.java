@@ -9,14 +9,14 @@ public class PRO_2_VowelDictionary {
 //		String word = "I";
 //		String word = "EIO";
 		dic(0,"",word);
-		System.out.println(answer);
+//		System.out.println(answer);
 
 	}
 	public static void dic(int idx, String s, String word) {
 		if(idx==5) return;
 		for(int i = 0;i<arr.length;i++) {
 			String str = s+arr[i];
-			System.out.println(i+" "+str+" "+arr[i]+" "+idx);
+//			System.out.println(i+" "+str+" "+arr[i]+" "+idx);
 			count++;
 			if(str.equals(word)) {
 				answer = count;

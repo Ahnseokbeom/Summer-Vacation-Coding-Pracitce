@@ -13,7 +13,7 @@ public class PRO_2_BridgeTruck {
 
         int index = 0;
         while (!queue.isEmpty()) {
-            //모든 트럭이 다 올라가면 다리가 빌 때까지 시간++.
+            //모든 트럭이 다 올라가면 다리가 빌 때까지 시간 더해줌.
             if (index == truck_weights.length) {
                 while (!queue.isEmpty()) {
                     queue.remove();

@@ -1,3 +1,4 @@
+package Week6;
 public class PRO_2_ColoringBook {
 	class Solution {
 	    public int[] solution(int m, int n, int[][] picture) {

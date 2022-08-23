@@ -1,3 +1,4 @@
+package Week8;
 import java.util.PriorityQueue;
 
 public class PRO_2_MoreSpicy {

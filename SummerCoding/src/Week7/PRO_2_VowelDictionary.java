@@ -1,3 +1,4 @@
+package Week7;
 
 public class PRO_2_VowelDictionary {
 	static String[] arr = {"A","E","I","O","U"};

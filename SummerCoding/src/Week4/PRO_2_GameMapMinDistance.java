@@ -1,3 +1,4 @@
+package Week4;
 
 public class PRO_2_GameMapMinDistance {
 	static int[] dx = {-1,1,0,0};

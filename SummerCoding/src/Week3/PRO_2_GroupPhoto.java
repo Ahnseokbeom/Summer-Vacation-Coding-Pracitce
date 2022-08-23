@@ -1,3 +1,4 @@
+package Week3;
 
 public class PRO_2_GroupPhoto {
 	static int answer;

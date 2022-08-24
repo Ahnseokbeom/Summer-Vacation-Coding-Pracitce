@@ -12,9 +12,9 @@ public class PRO_2_MoreSpicy {
 	        while(pq.peek()<=K && pq.size()!=1) {
 				int s1 = pq.poll();
 				int s2 = pq.poll();
-	            int mul = s1+(s2*2);
-				pq.add(mul);
+				pq.add(s1+(s2*2));
 				answer++;
+				System.out.println(pq);
 			}
 	        if(pq.peek()<K) answer = -1;
 	        return answer;

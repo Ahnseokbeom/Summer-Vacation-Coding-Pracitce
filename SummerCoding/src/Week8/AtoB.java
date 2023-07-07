@@ -10,7 +10,7 @@ public class AtoB {
 	public static int sum(int A, int B) {
 		sum1+=A;
 		A++;
-		if(A==10) {
+		if(A>B) {
 			System.out.println("합계 : "+sum1);
 			return 0;
 		}

@@ -95,11 +95,8 @@ public class BOJ_17300 {
 						}else flag = false;
 					}
 				}
-//			System.out.println("i : "+i+" flag : "+flag);
 			if(!flag) break;
 		}
-//		System.out.println("arr : "+Arrays.toString(arr));
-//		System.out.println("set : "+set);
 		if(set.size()!=l) System.out.println("NO");
 		else if(flag) System.out.println("YES");
 		else System.out.println("NO");

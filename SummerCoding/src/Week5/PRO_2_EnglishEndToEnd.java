@@ -1,26 +1,29 @@
 package Week5;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
 public class PRO_2_EnglishEndToEnd {
 	public static void main(String[] args) {
-//		String[] words = {"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"};
-//		String[] words = {"hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"};
-		String[] words = {"hello", "one", "even", "never", "now", "world", "draw"};
-		Deque<String> q = new LinkedList<>();
-//		int n = 3;
-//		int n = 5;
-		int n = 2;
-		// 현재 진행된 수
-		int count = 0;
-		// n = 2일 때, 1,3,5,7,9...
-		// n = 3일 때, 1,4,7,10...
-		// n = 5일 때, 1,6,11,16...
-		int minus = n-1;
+		int n1 = 3;
+		String[] words1 = {"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"};
+		System.out.println(Arrays.toString(solution(n1, words1)));
+		int n2 = 5;
+		String[] words2 = {"hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"};
+		System.out.println(Arrays.toString(solution(n2, words2)));
+		int n3 = 2;
+		String[] words3 = {"hello", "one", "even", "never", "now", "world", "draw"};
+		System.out.println(Arrays.toString(solution(n3, words3)));
 
+	}
+	public static int[] solution(int n, String[] words) {
+        int[] answer = new int[2];
+        Deque<String> q = new LinkedList<>();
+        int count = 0;
+		int minus = n-1;
 		// 1~n까지의 수를 담은 배열
-		int[] numbers = new int[n];
+        int[] numbers = new int[n];
 		for(int j = 1;j<=n;j++) {
 			numbers[j-1] = j;
 		}
@@ -35,7 +38,8 @@ public class PRO_2_EnglishEndToEnd {
 		int i = 0;
 		for(;i<words.length;i++) {
 			if(((i+minus)+1)%n==0) count++;
-			if(!q.isEmpty() && q.getLast().charAt(q.getLast().length()-1)!=words[i].charAt(0)) {
+			if(!q.isEmpty() &&
+               q.getLast().charAt(q.getLast().length()-1)!=words[i].charAt(0)) {
 				break;
 			}else if(!q.isEmpty() && q.contains(words[i])) {
 				break;
@@ -43,6 +47,12 @@ public class PRO_2_EnglishEndToEnd {
 				q.addLast(words[i]);
 			}
 		}
-		System.out.println(arr.get(i)+" "+count);
-	}
+        if(q.size()==words.length){
+            answer[0] = answer[1] = 0;
+        }else{
+            answer[0] = arr.get(i);
+            answer[1] = count;
+        }
+        return answer;
+    }
 }

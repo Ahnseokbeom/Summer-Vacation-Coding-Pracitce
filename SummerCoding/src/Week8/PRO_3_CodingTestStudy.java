@@ -27,6 +27,7 @@ public class PRO_3_CodingTestStudy {
 			answer += mincop - cop;
 			cop = mincop;
 		}
+
 		System.out.println("update : "+alp+" "+cop+" "+answer);
 	}
 

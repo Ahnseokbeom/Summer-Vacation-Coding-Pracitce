@@ -3,25 +3,33 @@ import java.util.Stack;
 
 public class PRO_2_BracketRotation {
 	public static void main(String[] args) {
-		String s = "[](){}";
-//		String s = "}]()[{";
-//		String s = "[)(]";
-//		String s = "}}}";
-		int ans = 0;
-		for(int i = 0;i<s.length();i++) {
-			if(check(s)) ans++;
-			System.out.println(s+" check : "+check(s));
+		String s1 = "[](){}";
+		System.out.println(solution(s1));
+
+		String s2 = "}]()[{";
+		System.out.println(solution(s2));
+
+		String s3 = "[)(]";
+		System.out.println(solution(s3));
+
+		String s4 = "}}}";
+		System.out.println(solution(s4));
+	}
+	public static int solution(String s) {
+        int answer = 0;
+        for(int i = 0;i<s.length();i++) {
+			if(check(s)) answer++;
 			s = s.substring(1,s.length())+s.charAt(0);
 		}
-		System.out.println(ans);
-	}
-	static boolean check(String s){
+        return answer;
+    }
+	public static boolean check(String s){
         Stack<Character> stack = new Stack<>();
         for(char c : s.toCharArray()){
            switch(c) {
-           case '(': stack.add(c); break;
-           case '{': stack.add(c); break;
-           case '[': stack.add(c); break;
+           case '(': stack.push(c); break;
+           case '{': stack.push(c); break;
+           case '[': stack.push(c); break;
            case ')':
         	   if(stack.isEmpty() || stack.peek()!='(') return false;
         	   stack.pop();

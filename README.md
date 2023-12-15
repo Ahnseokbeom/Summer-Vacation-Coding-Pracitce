@@ -35,7 +35,7 @@
 
 - [BOJ_17300](https://acmicpc.net/problem/17300) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week5/BOJ_17300.java)<br>
 - [PRO_2_EnglishEndToEnd](https://school.programmers.co.kr/learn/courses/30/lessons/12981) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week5/PRO_2_EnglishEndToEnd.java)<br>
-- [PRO_2_Printer](https://school.programmers.co.kr/learn/courses/30/lessons/42587) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week5/PRO_2_Printer.java)
+- [PRO_2_Process](https://school.programmers.co.kr/learn/courses/30/lessons/42587) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week5/PRO_2_Process.java)
 
 ## Week 6
 

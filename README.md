@@ -1,8 +1,8 @@
 # 여름방학 알고리즘 문제 스터디
 
-여름방학 동안 Java를 활용하여 알고리즘 문제 스터디를 진행하였습니다. 매주 3~6문제씩 풀어서 함께 코드 리뷰를 진행했습니다. 아래는 각 주차별로 풀이한 문제 목록입니다.
+여름방학 동안 Java를 활용하여 알고리즘 문제 스터디를 진행하였습니다.<br>매주 3~6문제씩 풀어서 함께 코드 리뷰를 진행했습니다. 아래는 각 주차별로 풀이한 문제 목록입니다.
 
-각각의 문제번호는 백준 문제는 [BOJ_문제번호](https://acmicpc.net/problem/문제번호)
+각각의 문제번호는 백준 문제는 [BOJ_문제번호](https://acmicpc.net/problem/문제번호)<br>
 프로그래머스 문제는 [PRO_문제난이도(1~5)_문제이름(영문)](https://school.programmers.co.kr/learn/courses/30/lessons/문제번호)
 
 ## Week 1
@@ -39,7 +39,7 @@
 
 - [PRO_2_ColoringBook](https://school.programmers.co.kr/learn/courses/30/lessons/1829)
 - [PRO_2_OpenChat](https://school.programmers.co.kr/learn/courses/30/lessons/42888)
-- [PRO_2_StringZip]([PRO_2_StringZip.java](https://school.programmers.co.kr/learn/courses/30/lessons/60057))
+- [PRO_2_StringZip](https://school.programmers.co.kr/learn/courses/30/lessons/60057)
 
 ## Week 7
 
@@ -51,9 +51,9 @@
 
 - [AtoB](AtoB.java)
 - [BOJ_3584](https://acmicpc.net/problem/3584)
-- [PRO_2_MoerSpicy]([PRO_2_MoerSpicy.java](https://school.programmers.co.kr/learn/courses/30/lessons/42626))
+- [PRO_2_MoerSpicy](https://school.programmers.co.kr/learn/courses/30/lessons/42626)
 - [PRO_2_TwoQueueSumSame](https://school.programmers.co.kr/learn/courses/30/lessons/118667)
-- [PRO_2_CodingTestStudy]([PRO_2_CodingTestStudy.java](https://school.programmers.co.kr/learn/courses/30/lessons/118668))
+- [PRO_2_CodingTestStudy](https://school.programmers.co.kr/learn/courses/30/lessons/118668)
 
 ## 참여자
 

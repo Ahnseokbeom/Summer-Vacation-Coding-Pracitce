@@ -52,10 +52,10 @@
 ## Week 8
 
 - [AtoB](AtoB.java) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/AtoB.java)<br>
-- [BOJ_3584](https://acmicpc.net/problem/3584) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/BOJ_3584.java)<br>
-- [PRO_2_MoerSpicy](https://school.programmers.co.kr/learn/courses/30/lessons/42626) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/PRO_2_MoerSpicy.java)<br>
+- [BOJ_3584_1](https://acmicpc.net/problem/3584) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/BOJ_3584_1.java)<br>
+- [PRO_2_MoreSpicy](https://school.programmers.co.kr/learn/courses/30/lessons/42626) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/PRO_2_MoreSpicy.java)<br>
 - [PRO_2_TwoQueueSumSame](https://school.programmers.co.kr/learn/courses/30/lessons/118667) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/PRO_2_TwoQueueSumSame.java)<br>
-- [PRO_2_CodingTestStudy](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/PRO_2_CodingTestStudy.java)
+- [PRO_3_CodingTestStudy](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | [Code](https://github.com/Ahnseokbeom/Summer-Vacation-Coding-Pracitce/tree/main/SummerCoding/src/Week8/PRO_3_CodingTestStudy.java)
 
 ## 참여자
 

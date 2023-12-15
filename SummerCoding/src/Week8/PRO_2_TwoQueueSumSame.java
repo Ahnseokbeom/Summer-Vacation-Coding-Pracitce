@@ -3,8 +3,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class PRO_2_TwoQueueSumSame {
-	class Solution {
-	    public int solution(int[] queue1, int[] queue2) {
+	public static void main(String[] args) {
+		System.out.println(solution(new int[] {3,2,7,2}, new int[] {4,6,5,1}));
+		System.out.println(solution(new int[] {1,2,1,2}, new int[] {1,10,1,2}));
+		System.out.println(solution(new int[] {1,1}, new int[] {1,5}));
+	}
+	 public static int solution(int[] queue1, int[] queue2) {
 	        int answer = -1;
 	        Queue<Integer> q1 = new LinkedList<>();
 			Queue<Integer> q2 = new LinkedList<>();
@@ -38,5 +42,4 @@ public class PRO_2_TwoQueueSumSame {
 	        }
 	        return answer;
 	    }
-	}
 }

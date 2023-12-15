@@ -1,76 +1,55 @@
 package Week3;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class PRO_2_MenuRenewal {
-	static HashMap<String, Integer> map = new HashMap<>();
-	static HashSet<Integer> set = new HashSet<>();
-	static HashSet<String> set2 = new HashSet<>();
+ 	static String str;
+	static HashMap<String, Integer> menu;
+	static boolean isVisited[];
+	static int max[];
 	public static void main(String[] args) {
-		// 실패
-		ArrayList<String> ans = new ArrayList<>();
-//		String[] orders = {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
-//		String[] orders = {"XYZ", "XWY", "WXA"};
-		String[] orders = {"ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"};
-		int[] course = {2,3,4};
-
-		for(int cLength : course) {
-			for(String order : orders) {
-				comb("",order,cLength);
-			}
-		}
-		ArrayList<Integer> arr = new ArrayList<>(map.values());
-		for(int i = 0;i<arr.size();i++) {
-			if(arr.get(i)==1) continue;
-			set.add(arr.get(i));
-		}
-		System.out.println(map);
-		// [AB, AC, ACD, AD, ADE, AE, CD, DE, XY, XYZ, XZ, YZ]
-		Integer[] max = set.toArray(new Integer[0]);
-		System.out.println(Arrays.toString(max));
-		System.out.println(arr);
-		for(int i = 0;i<max.length;i++) {
-			for(String value : map.keySet()) {
-				if(max[i]==map.get(value)) set2.add(value);
-			}
-		}
-		ans.addAll(set2);
-		System.out.println(ans);
-		// [DE, ADE, CE, AC, BCF, CDE, BCG, ACDE, BCFG]
-		for(int i = 0;i<ans.size();i++) System.out.print(map.get(ans.get(i))+" ");
-		System.out.println();
-
-		for(int i = 0;i<ans.size();i++) {
-			for(int j = ans.size()-1;j>=i+1;j--) {
-				System.out.println(ans.get(i)+" "+ans.get(j));
-				if(ans.get(i).length()==ans.get(j).length()) {
-					if(map.get(ans.get(i))>map.get(ans.get(j))) {
-						ans.remove(j); j++;
-					}else if(map.get(ans.get(i))<map.get(ans.get(j))) {
-						ans.remove(i);i = 0;
-					}
-				}
-			}
-		}
-		System.out.println(ans);
-		Collections.sort(ans);
-		String[] answer = new String[ans.size()];
-		for(int i = 0;i<answer.length;i++) {
-			answer[i] = ans.get(i);
-		}
-		System.out.println(Arrays.toString(answer));
+		System.out.println(Arrays.toString(solution(new String[] {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"},
+				new int[] {2,3,4})));
+		System.out.println(Arrays.toString(solution(new String[] {"ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"},
+				new int[] {2,3,5})));
+		System.out.println(Arrays.toString(solution(new String[] {"XYZ", "XWY", "WXA"}, new int[] {2,3,4})));
 	}
-    public static void comb(String order, String s, int count) {
-        if (count == 0) {
-            map.put(order, map.getOrDefault(order, 0) + 1);
-            return;
-        }
 
-        for (int i = 0; i < s.length(); i++) {
-            comb(order + s.charAt(i), s.substring(i + 1), count - 1);
-        }
-    }
+	public static String[] solution(String[] orders, int[] course) {
+		ArrayList<String> answer = new ArrayList<String>();
+
+		max = new int[course.length];
+		menu = new HashMap<String, Integer>();
+		for (int i = 0; i < orders.length; i++) {
+			char a[] = orders[i].toCharArray();
+			Arrays.sort(a);
+			str = String.copyValueOf(a);
+
+			for (int j = 0; j < course.length; j++) {
+				isVisited = new boolean[str.length()];
+				comb(0, 0, "", j, course[j]);
+			}
+		}
+
+		for (String s : menu.keySet())
+			for (int i = 0; i < course.length; i++)
+				if (course[i] == s.length() && max[i] != 1 && menu.get(s) == max[i])
+					answer.add(s);
+
+		return answer.stream().sorted().map(s -> s).toArray(String[]::new);
+	}
+
+	private static void comb(int cur, int cnt, String s, int j, int N) {
+		if (cnt == N) {
+			menu.put(s, menu.containsKey(s) ? menu.get(s) + 1 : 1);
+			max[j] = Math.max(max[j], menu.get(s));
+			return;
+		}
+
+		for (int i = cur; i < str.length(); i++) {
+			isVisited[i] = true;
+			comb(i + 1, cnt + 1, s + str.charAt(i), j, N);
+		}
+	}
 }

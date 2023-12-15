@@ -6,15 +6,11 @@ import java.util.LinkedList;
 
 public class PRO_2_EnglishEndToEnd {
 	public static void main(String[] args) {
-		int n1 = 3;
-		String[] words1 = {"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"};
-		System.out.println(Arrays.toString(solution(n1, words1)));
-		int n2 = 5;
-		String[] words2 = {"hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"};
-		System.out.println(Arrays.toString(solution(n2, words2)));
-		int n3 = 2;
-		String[] words3 = {"hello", "one", "even", "never", "now", "world", "draw"};
-		System.out.println(Arrays.toString(solution(n3, words3)));
+		System.out.println(Arrays.toString(solution(3,
+				new String[] {"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"})));
+		System.out.println(Arrays.toString(solution(5,
+				new String[]{"hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"})));
+		System.out.println(Arrays.toString(solution(2, new String[]{"hello", "one", "even", "never", "now", "world", "draw"})));
 
 	}
 	public static int[] solution(int n, String[] words) {
